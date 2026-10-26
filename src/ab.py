@@ -13,8 +13,12 @@ CONTROL = "No E-Mail"
 ARMS = ["Mens E-Mail", "Womens E-Mail"]
 
 
+SOURCE_URL = "http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv"
+
+
 def load(path=DATA):
-    return pd.read_csv(path)
+    """Read the local copy; if it is missing (the file is not redistributed in the repo), fetch it from the original source."""
+    return pd.read_csv(path if Path(path).exists() else SOURCE_URL)
 
 
 # ---------- design checks ----------

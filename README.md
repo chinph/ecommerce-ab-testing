@@ -30,7 +30,7 @@ The **Women's email** is real but marginal: about **$0.12 per customer**, with a
 ## Run it
 ```
 pip install -r requirements.txt
-python src/download_data.py          # fetches the data (not redistributed here)
+python src/download_data.py          # fetches the data (not redistributed here; the app also fetches it if missing)
 streamlit run app/Home.py            # explorer + power calculator
 ```
 The analysis is in [notebooks/hillstrom_email_ab_test.ipynb](notebooks/hillstrom_email_ab_test.ipynb); reusable functions are in [src/ab.py](src/ab.py).
